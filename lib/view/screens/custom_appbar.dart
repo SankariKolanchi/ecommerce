@@ -22,6 +22,15 @@ class _MyWidgetState extends State<Empty> {
     const Center(
       child: Text("Trending Products"),
     ),
+    const Center(
+      child: Text("Shop"),
+    ),
+    const Center(
+      child: Text("Search"),
+    ),
+    const Center(
+      child: Text("Settings"),
+    ),
   ];
 
   _changeTab(int index) {
@@ -92,25 +101,26 @@ class _MyWidgetState extends State<Empty> {
                   Text(
                     _selectedTab == 0
                         ? "Search any products"
-                        : (_selectedTab == 1 ? "Search any products" : "Search any products"),
+                        : (_selectedTab == 1
+                            ? "Search any products"
+                            : "Search any products"),
                   ),
-                  SizedBox(
-                    width: 80,
-                  ),
+                  Spacer(),
                   Icon(
                     Icons.mic,
-                    color: Colors.red,
+                    color: Colors.grey,
                   )
                 ],
               )),
             ),
           ),
         ),
-      ),      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: (_selectedTab == 0
-            ? HomeScreen()
-            : (_selectedTab == 1 ? Trending() : ShopPage()))),
+      ),
+      body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: (_selectedTab == 0
+              ? HomeScreen()
+              : (_selectedTab == 1 ? Trending() : ShopPage()))),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedTab,
           onTap: (index) => _changeTab(index),
@@ -119,20 +129,26 @@ class _MyWidgetState extends State<Empty> {
           unselectedIconTheme: IconThemeData(color: Colors.grey.shade300),
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.food_bank_rounded),
+              icon: Icon(Icons.home),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.food_bank),
+              icon: Icon(Icons.heart_broken),
               label: 'Trending',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.insert_chart),
-              label: 'Shop',
+              icon: Icon(Icons.add_shopping_cart),
+              label: 'ShopPage',
             ),
-
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'search',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'settings',
+            ),
           ]),
-
     );
   }
 }
