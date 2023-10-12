@@ -1,4 +1,5 @@
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:ecommerce/view/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,7 +10,8 @@ class HomeScreen extends StatelessWidget {
     return SizedBox(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
+        child: SingleChildScrollView(
+            child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -273,16 +275,162 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-        DotsIndicator(
-          dotsCount: 2, // The number of dots in the indicator.
-          position: 0, // The current position of the indicator.
-          decorator: DotsDecorator(
-            size: const Size(8.0, 8.0),
-            activeColor: Colors.black,
-
-          ),
-        )],
-        ),
+            DotsIndicator(
+              dotsCount: 2, // The number of dots in the indicator.
+              position: 0, // The current position of the indicator.
+              decorator: DotsDecorator(
+                size: const Size(8.0, 8.0),
+                activeColor: Colors.black,
+              ),
+            ),
+            Container(
+              height: 80,
+              width: 400,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  color: Colors.blue),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "Deal of the day",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 6, left: 9, right: 8, bottom: 6),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5)),
+                              border: Border.all(
+                                color: Colors.white,
+                              ),
+                            ),
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    bottom: 10, left: 10, right: 10),
+                                child: Text(
+                                  "View All",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Image.asset("assets/images/clock.png"),
+                        Text("22h 55m 20s remaining")
+                      ],
+                    )
+                  ]),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 100),
+                        child: Image.asset("assets/images/girlpi.png"),
+                      ),
+                      Text(
+                        "Women Printed Kurta",
+                        style: AppTextStyle.appBarTitle,
+                      ),
+                      Text("Neque porro quisquam \nest qui dolorem ipsum quia"),
+                      Text("₹1500"),
+                      Row(
+                        children: [
+                          Text(
+                            "₹2499",
+                            style: TextStyle(
+                              decoration: TextDecoration.lineThrough,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Text(
+                            "40%Off",
+                            style: TextStyle(color: Colors.orange),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Image.asset("assets/images/goldstar.png"),
+                          Image.asset("assets/images/goldstar.png"),
+                          Image.asset("assets/images/goldstar.png"),
+                          Image.asset("assets/images/blackstar.png"),
+                          Text("56890")
+                        ],
+                      ),
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 100),
+                        child: Image.asset("assets/images/shoe.png"),
+                      ),
+                      Text(
+                        "Women Printed Kurta",
+                        style: AppTextStyle.appBarTitle,
+                      ),
+                      Text("Neque porro quisquam est qui dolorem ipsum quia"),
+                      Text("₹1500"),
+                      Row(
+                        children: [
+                          Text(
+                            "₹2499",
+                            style: TextStyle(
+                              decoration: TextDecoration.lineThrough,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Text(
+                            "40%Off",
+                            style: TextStyle(color: Colors.orange),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Image.asset("assets/images/goldstar.png"),
+                          Image.asset("assets/images/goldstar.png"),
+                          Image.asset("assets/images/goldstar.png"),
+                          Image.asset("assets/images/blackstar.png"),
+                          Text("56890")
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        )),
       ),
     );
   }
