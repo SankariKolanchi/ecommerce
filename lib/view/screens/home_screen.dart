@@ -429,6 +429,32 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(
+              height: 50,
+            ),
+            Row(
+              children: [
+                Image.asset("assets/images/offer.png"),
+                SizedBox(
+                  width: 20,
+                ),
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 60,left: 10)
+,                          child: Text("Special Offers"),
+                        ),
+                        Image.asset("assets/images/😱 .png"),
+                      ],
+                    ),
+                    Text("We make sure you get the offer \nyou need at best prices"),
+                  ],
+                ),
+
+              ],
+            )
           ],
         )),
       ),
