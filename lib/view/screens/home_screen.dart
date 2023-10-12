@@ -443,18 +443,107 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 60,left: 10)
-,                          child: Text("Special Offers"),
+                          padding: const EdgeInsets.only(right: 60, left: 10),
+                          child: Text("Special Offers"),
                         ),
                         Image.asset("assets/images/😱 .png"),
                       ],
                     ),
-                    Text("We make sure you get the offer \nyou need at best prices"),
+                    Text(
+                        "We make sure you get the offer \nyou need at best prices"),
                   ],
                 ),
-
               ],
-            )
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Image.asset("assets/images/slipper.png"),
+                Column(
+                  children: [
+                    Text("Flat and Heels"),
+                    Text("Stand a chance to get rewarded"),
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.red),
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                            top: 6, left: 9, right: 8, bottom: 6),
+                        child: Row(
+                          children: [
+                            Text(
+                              "Visit Now",
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                            Image.asset("assets/images/rightarrow.png")
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Container(
+              height: 80,
+              width: 400,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  color: Colors.pink),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "Trending products",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 6, left: 9, right: 8, bottom: 6),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5)),
+                              border: Border.all(
+                                color: Colors.white,
+                              ),
+                            ),
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    bottom: 10, left: 10, right: 10),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "View All",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 20),
+                                    ),
+                                    Image.asset("assets/images/rightarrow.png")
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Image.asset("assets/images/calender.png"),
+                        Text("Last Date 29/02/22")
+                      ],
+                    )
+                  ]),
+            ),
           ],
         )),
       ),
