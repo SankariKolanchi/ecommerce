@@ -6,13 +6,16 @@ abstract class AppTextStyle {
   const AppTextStyle._();
 
   static const appBarTitle =
-  TextStyle(fontSize: 22, fontWeight: FontWeight.w500);
+      TextStyle(fontSize: 22, fontWeight: FontWeight.w500);
 
   static const headerTitleStyle =
-  TextStyle(fontSize: 24, fontWeight: FontWeight.w700);
+      TextStyle(fontSize: 24, fontWeight: FontWeight.w700);
+
+  static const pinkFs40Fw700 =
+      TextStyle(fontSize: 40, fontWeight: FontWeight.w700,color: AppColors.pinkColor);
 
   static const titleTextStyle =
-  TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black);
+      TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black);
 
   static const darkBlackF13W500TextStyle = TextStyle(
       fontSize: 13,
@@ -20,24 +23,22 @@ abstract class AppTextStyle {
       color: AppColors.darkBlackColor);
 
   static const pink = TextStyle(
-      fontSize: 40,
-      fontWeight: FontWeight.w700,
-      color: AppColors.pinkColor);
+      fontSize: 40, fontWeight: FontWeight.w700, color: AppColors.pinkColor);
 
   static const blackF12W700TextStyle =
-  TextStyle(fontSize: 12, fontWeight: FontWeight.w700);
+      TextStyle(fontSize: 12, fontWeight: FontWeight.w700);
 
   static const blackF12W400TextStyle =
-  TextStyle(fontSize: 12, fontWeight: FontWeight.w400);
+      TextStyle(fontSize: 12, fontWeight: FontWeight.w400);
 
   static const blackF14W500TextStyle =
-  TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
+      TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
 
   static const blackF16W700TextStyle =
-  TextStyle(fontSize: 16, fontWeight: FontWeight.w700);
+      TextStyle(fontSize: 16, fontWeight: FontWeight.w700);
 
   static const whiteF14W600TextStyle =
-  TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.white);
+      TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.white);
 
   static const redF14W500TextStyle = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: AppColors.redColor);

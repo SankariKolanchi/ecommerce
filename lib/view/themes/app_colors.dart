@@ -10,4 +10,5 @@ sealed class AppColors {
   static const darkBrownColor = Color(0xFFFDCA98);
   static const yellowColor = Color(0xFFFCDFA1);
   static const pinkColor = Color(0xFFF83758);
+
 }

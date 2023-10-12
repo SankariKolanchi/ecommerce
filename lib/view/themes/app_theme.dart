@@ -20,7 +20,7 @@ sealed class AppTheme {
     appBarTheme: const AppBarTheme(
         centerTitle: false,
         backgroundColor: Colors.white,
-        elevation: 0.5,
+        elevation: 0,
         scrolledUnderElevation: 0),
     cardTheme: const CardTheme(color: Colors.white, elevation: 0.5),
     popupMenuTheme: const PopupMenuThemeData(

@@ -1,4 +1,5 @@
-import 'package:ecommerce/view/screens/custom_appbar.dart';
+import 'package:ecommerce/view/screens/dashboard.dart';
+import 'package:ecommerce/view/screens/splash_screen.dart';
 import 'package:ecommerce/view/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.appTheme,
-      home: const Empty(),
+      home: const SplashScreen(),
     );
   }
 }
