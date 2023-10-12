@@ -16,14 +16,17 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("All Featured"),
+                Text(
+                  "All Featured",
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
                 SizedBox(
                   width: 40,
                 ),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(5)),
-                    color: Colors.grey,
+                    color: Colors.white,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(
@@ -42,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(5)),
-                    color: Colors.grey,
+                    color: Colors.white,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(
@@ -183,7 +186,7 @@ class HomeScreen extends StatelessWidget {
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(5)),
                                     border: Border.all(
-                                        color: Colors.black, width: 2.0),
+                                        color: Colors.white, width: 2.0),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.only(
@@ -192,7 +195,9 @@ class HomeScreen extends StatelessWidget {
                                       children: [
                                         Text(
                                           "Shop Now",
-                                          style: TextStyle(fontSize: 12.0),
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 18.0),
                                         ),
                                         Image.asset(
                                             "assets/images/up_arrow.png"),
@@ -455,6 +460,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(
+              height: 40,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -475,7 +483,7 @@ class HomeScreen extends StatelessWidget {
                             Text(
                               "Visit Now",
                               style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                             ),
                             Image.asset("assets/images/rightarrow.png")
@@ -544,6 +552,17 @@ class HomeScreen extends StatelessWidget {
                     )
                   ]),
             ),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 200),
+                  child: Image.asset(
+                      "assets/images/imagewatch.png"
+                  ),
+                ),
+                
+              ],
+            )
           ],
         )),
       ),

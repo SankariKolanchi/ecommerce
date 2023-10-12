@@ -63,9 +63,10 @@ class _MyWidgetState extends State<Empty> {
                   width: 50,
                   height: 60,
                 ),
+                SizedBox(width: 10,),
                 Text(
                   "Stylish",
-                  style: AppTextStyle.appBarTitle,
+                 style: TextStyle(color: Colors.blue),
                 ),
                 SizedBox(
                   width: 80,
@@ -94,7 +95,9 @@ class _MyWidgetState extends State<Empty> {
               child: IntrinsicHeight(
                   child: Row(
                 children: [
-                  Icon(Icons.search),
+                  Icon(Icons.search,
+                  color: Colors.grey,
+                  ),
                   SizedBox(
                     width: 20,
                   ),
